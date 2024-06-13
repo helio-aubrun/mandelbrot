@@ -24,14 +24,16 @@ def update_fig(extent):
     ax.imshow(z.T, origin='lower', cmap='hot', extent=extent)
     return ax
 
-fig, ax = plt.subplots(figsize=(width, height), dpi=dpi)
-
+# Initial parameters
 xmin, xmax, ymin, ymax = -2.0, 0.5, -1.25, 1.25
 width, height = 10, 10
 dpi = 80
 img_width = dpi * width
 img_height = dpi * height
 max_iter = 256
+
+# Create figure and axes
+fig, ax = plt.subplots(figsize=(width, height), dpi=dpi)
 
 extent = [xmin, xmax, ymin, ymax]
 
