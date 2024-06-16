@@ -1,3 +1,4 @@
+import numpy as np
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -30,3 +31,5 @@ def sierpinski_triangle(order, ax=None):
 
 def display_sierpinski():
     sierpinski_triangle(5)
+
+display_sierpinski()

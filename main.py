@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import PhotoImage
-from sierpinski_triangle import display_sierpinski_triangle
+from sierpinski_triangle import display_sierpinski
 from mandelbrot import display_mandelbrot
 from julia import display_julia
 from koch_snowflake import display_koch_snowflake
@@ -21,7 +21,7 @@ style.configure("TLabel", font=("Helvetica", 18, "bold"), background="#1e1e2e", 
 title_label = ttk.Label(root, text="Fractal Explorer")
 title_label.pack(pady=20)
 
-button_sierpinski = ttk.Button(root, text="Sierpinski Triangle", command=display_sierpinski_triangle)
+button_sierpinski = ttk.Button(root, text="Sierpinski Triangle", command=display_sierpinski)
 button_sierpinski.pack(pady=10)
 
 button_mandelbrot = ttk.Button(root, text="Mandelbrot Set", command=display_mandelbrot)
