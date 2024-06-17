@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#burning ship formula
+#formule du burning ship
 def burning_ship(c, max_iter):
     z = c
     for n in range(max_iter):
@@ -10,7 +10,7 @@ def burning_ship(c, max_iter):
             return n
     return max_iter
 
-#generate the burning ship
+#generation du burning ship en utilisant la fotmule
 def generate_burning_ship(xmin, xmax, ymin, ymax, width, height, max_iter):
     ligne = np.linspace(xmin, xmax, width)
     colmn = np.linspace(ymin, ymax, height)
@@ -20,7 +20,7 @@ def generate_burning_ship(xmin, xmax, ymin, ymax, width, height, max_iter):
             image[i, j] = burning_ship(ligne [i] + 1j * colmn [j], max_iter)
     return image
 
-#displaying the burning ship
+#affichage
 def display_burning_ship():
     xmin, xmax, ymin, ymax = -2.0, 1.0, -1.5, 1.5
     width, height = 800, 600

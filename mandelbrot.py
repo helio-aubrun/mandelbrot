@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#formule
 def mandelbrot(c, max_iter):
     z = c
     for n in range(max_iter):
@@ -9,6 +10,7 @@ def mandelbrot(c, max_iter):
         z = z*z + c
     return max_iter
 
+#generation
 def mandelbrot_set(xmin,xmax,ymin,ymax,width,height,max_iter):
     r1 = np.linspace(xmin, xmax, width)
     r2 = np.linspace(ymin, ymax, height)
@@ -18,6 +20,7 @@ def mandelbrot_set(xmin,xmax,ymin,ymax,width,height,max_iter):
             n3[i,j] = mandelbrot(r1[i] + 1j*r2[j],max_iter)
     return (r1,r2,n3)
 
+#affichage
 def display_mandelbrot():
     xmin, xmax, ymin, ymax = -2.0, 1.0, -1.5, 1.5
     width, height, max_iter = 800, 800, 256

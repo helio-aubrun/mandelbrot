@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+#generation
 def sierpinski_triangle(order, ax=None):
     if ax is None:
         fig, ax = plt.subplots()
@@ -28,5 +29,6 @@ def sierpinski_triangle(order, ax=None):
     sierpinski(order, points, colors)
     plt.show()
 
+#affichage
 def display_sierpinski():
     sierpinski_triangle(5)
