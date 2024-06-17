@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-#formule de snowflake de koch
+#koch snowflake formula
 def koch_curve(order, p1, p2):
     if order == 0:
         return [p1, p2]
@@ -17,7 +17,7 @@ def koch_curve(order, p1, p2):
                 koch_curve(order - 1, p5, p4) +
                 koch_curve(order - 1, p4, p2))
     
-#initialisation des point et utilisation de la formule de snowflake de koch
+#initialization of points and use of the koch snowflake formula
 def koch_snowflake(order, scale=10):
     p1 = [0, 0]
     p2 = [scale, 0]
@@ -26,7 +26,7 @@ def koch_snowflake(order, scale=10):
             koch_curve(order, p2, p3) +
             koch_curve(order, p3, p1))
 
-#affichage du snowflake
+#display of the snowflake
 def display_koch_snowflake():
     order = 5
     snowflake = koch_snowflake(order)
