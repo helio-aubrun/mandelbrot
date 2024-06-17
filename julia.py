@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#formule 
 def julia(c, max_iter):
     def julia_iter(z):
         for n in range(max_iter):
@@ -11,6 +12,7 @@ def julia(c, max_iter):
     
     return np.vectorize(julia_iter)
 
+#generation 
 def julia_set(xmin,xmax,ymin,ymax,width,height,max_iter,c):
     x = np.linspace(xmin, xmax, width)
     y = np.linspace(ymin, ymax, height)
@@ -19,6 +21,7 @@ def julia_set(xmin,xmax,ymin,ymax,width,height,max_iter,c):
     julia_fractal = julia(c, max_iter)
     return julia_fractal(Z)
 
+#affichage
 def display_julia():
     xmin, xmax, ymin, ymax = -1.5, 1.5, -1.5, 1.5
     width, height, max_iter = 800, 800, 256
