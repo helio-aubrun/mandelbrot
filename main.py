@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter import PhotoImage
 from sierpinski_triangle import display_sierpinski
 from mandelbrot import display_mandelbrot
 from julia import display_julia
