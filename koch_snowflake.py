@@ -27,13 +27,15 @@ def koch_snowflake(order, scale=10):
             koch_curve(order, p3, p1))
 
 #affichage du snowflake
-def display_koch_snowflake(order = 5):
+def display_koch_snowflake():
+    order = 5
     snowflake = koch_snowflake(order)
     snowflake = np.array(snowflake)
     
     plt.plot(snowflake[:, 0], snowflake[:, 1], 'b-')
     plt.title(f'Koch Snowflake - Order {order}')
     plt.axis('equal')
+    plt.axis('off')
     plt.show()
 
 

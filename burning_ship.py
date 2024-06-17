@@ -30,6 +30,8 @@ def display_burning_ship():
 
     plt.imshow(image, extent=[xmin, xmax, ymin, ymax], cmap='GnBu_r')
     plt.colorbar()
+    plt.axis('off')
+    plt.axis('equal')
     plt.title('Burning Ship Fractal')
     plt.xlabel('Re')
     plt.ylabel('Im')
