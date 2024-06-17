@@ -30,3 +30,5 @@ def sierpinski_triangle(order, ax=None):
 
 def display_sierpinski():
     sierpinski_triangle(5)
+
+display_sierpinski()
